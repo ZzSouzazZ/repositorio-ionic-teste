@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Firestore</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let traveler of travelers | async">
+      <ion-avatar item-start>
+        <img [src]="traveler.photo"/>
+      </ion-avatar>
+      <h2>{{ traveler.name }}</h2>
+      <p>{{ traveler.country }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
